@@ -9,8 +9,14 @@ on:
       - '*' 
 
 jobs:
-  build-and-push:
+  build:
     uses: shahrukhshafique/reusable-workflows/.github/workflows/build.yml@main
+    with:
+      CODE_REPO: ${{ github.repository }}
+
+ # Second job: Dockerize with the built JAR
+  docker-build-and-push:
+    uses: shahrukhshafique/reusable-workflows/.github/workflows/dockerbuild-and-push.yml@main
     with:
       CODE_REPO: ${{ github.repository }}
     secrets: inherit
