@@ -16,6 +16,7 @@ jobs:
 
  # Second job: Dockerize with the built JAR
   docker-build-and-push:
+    needs: build  # This job depends on the build job
     uses: shahrukhshafique/reusable-workflows/.github/workflows/dockerbuild-and-push.yml@main
     with:
       CODE_REPO: ${{ github.repository }}
