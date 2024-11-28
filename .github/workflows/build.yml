@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-push:
-    uses: reusable-workflows/.github/workflows/build.yaml@master
+    uses: shahrukhshafique/reusable-workflows/.github/workflows/build.yaml@master
     with:
       CODE_REPO: ${{ github.repository }}
     secrets: inherit
