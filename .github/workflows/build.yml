@@ -15,7 +15,7 @@ jobs:
     with:
       CODE_REPO: ${{ github.repository }}
 
- # Second job: Dockerize with the built JAR
+ # dockerfile job: Dockerize with the built JAR and push into ECR
   docker-build-and-push:
     needs: build  
     uses: shahrukhshafique/reusable-workflows/.github/workflows/dockerbuild-and-push.yml@main
@@ -28,5 +28,6 @@ jobs:
     needs: docker-build-and-push  
     uses: shahrukhshafique/reusable-workflows/.github/workflows/helm-deploy.yml@main
     with:
-      CODE_REPO: ${{ github.repository }}
+      CODE_REPO: "shahrukhshafique/helm-charts"
+      path: webapp
     secrets: inherit
