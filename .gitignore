@@ -31,3 +31,49 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore Maven or Gradle build directories
+target/
+build/
+
+# Ignore dependency directories
+/.mvn/
+/.gradle/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore Eclipse project files
+.project
+.classpath
+.settings/
+
+# Ignore NetBeans project files
+.nb-gradle/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Maven wrapper files
+mvnw
+mvnw.cmd
+/.mvn/
+
+# Ignore Java compiled files
+*.class
+
+# Ignore log files
+*.log
+
+# Ignore package manager dependency files
+node_modules/
+
+# Ignore JetBrains specific files (e.g., if you use PyCharm, WebStorm, etc.)
+.idea/
+
+# Ignore environment-specific files
+*.env
+
+# Ignore test output files
+test-outputs/
